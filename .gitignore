@@ -1,8 +1,4 @@
 .idea/
-#
-#modules/__pycache__/
-#__pycache__/
-#build/
-#dist/
-#Main.spec
-#img/
+djangoex/__pycache__/
+mainapp/__pycache__/
+mainapp/migrations/__pycache__/
