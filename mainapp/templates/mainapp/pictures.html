@@ -1,13 +1,13 @@
-{% extends "djangoex/index.html" %}
+{% extends "index.html" %}
 {% load static %}
 
 
-    {% block pictures %}
+{% block pictures %}
 {% for picture in pictures %}
 
-
+    <img src="{{ picture.picture.url }}" alt="">
     <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="{% url  %}" class="d-block photo-item" data-fancybox="gallery">
+          <a href="{% url "picture" picture_id=picture.id %}" class="d-block photo-item" data-fancybox="gallery">
             <img src="{{ picture.picture.url }}" alt="Image" class="img-fluid">
             <div class="photo-text-more">
               <span class="icon icon-search"></span>

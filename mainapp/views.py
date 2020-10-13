@@ -4,4 +4,4 @@ from .models import Pictures
 
 def main(request):
     pictures = Pictures.objects.all()
-    return render(request, "djangoex/index.html", {"pictures": pictures})
+    return render(request, "index.html", {"pictures": pictures})
