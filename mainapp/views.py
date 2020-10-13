@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Pictures
 
 
 def main(request):
-    return render(request, "index.html")
+    pictures = Pictures.objects.all()
+    return render(request, "djangoex/index.html", {"pictures": pictures})
