@@ -8,6 +8,21 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
+
+	let num = 1;
+
+	$('.spspsp').each(function () {
+		if (num === 1) {
+			$(this).attr('data-aos-delay', '0');
+			num = 2;
+		} else if (num === 2) {
+			$(this).attr('data-aos-delay', '100');
+			num = 3;
+		} else if (num === 3) {
+			$(this).attr('data-aos-delay', '200');
+			num = 1;
+		}
+	});
 	
 
 	var siteMenuClone = function() {

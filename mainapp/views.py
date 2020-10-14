@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Pictures
+from .models import Pictures, MainPicture
 
 
-def main(request):
+def main_pict(request):
     pictures = Pictures.objects.all()
-    return render(request, "index.html", {"pictures": pictures})
+    main_pictur = MainPicture.objects.first()
+    return render(request, "mainapp/pictures.html", {"pictures": pictures,
+                                                     "main_pictur": main_pictur})
+

@@ -1,21 +1,24 @@
 {% extends "index.html" %}
-{% load static %}
+
+{% block main_picture %}
+    <section class="site-section-hero bg-image" style="background-image: url({{ main_pictur.main_picture.url }});" data-stellar-background-ratio="0.5" id="section-home">
+{% endblock %}
 
 
-{% block pictures %}
-{% for picture in pictures %}
+{% block pictures_list %}
 
-    <img src="{{ picture.picture.url }}" alt="">
-    <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="{% url "picture" picture_id=picture.id %}" class="d-block photo-item" data-fancybox="gallery">
-            <img src="{{ picture.picture.url }}" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
+    {% for picture in pictures %}
+
+        <div class="col-6 col-md-6 col-lg-4 spspsp" data-aos="fade-up">
+            <a href="{{ picture.picture.url }}" class="d-block photo-item" data-fancybox="gallery">
+                <img src="{{ picture.picture.url }}" alt="Image" class="img-fluid">
+                    <div class="photo-text-more">
+                        <span class="icon icon-search"></span>
+                    </div>
+            </a>
         </div>
 
+    {% endfor %}
 
-{% endfor %}
 {% endblock %}
 
