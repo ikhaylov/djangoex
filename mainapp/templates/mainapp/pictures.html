@@ -29,4 +29,18 @@
 
 {#width="{{ im.width }}" height="{{ im.height }}"#}
 
-
+{% block testimonial %}
+    {% for testimonial in testimonials %}
+        {% thumbnail testimonial.photo "655x655" crop="center" as im %}
+            <div class="testimony text-center px-md-4">
+                <figure class="mx-auto d-inline-block">
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ testimonial.name_surname }}" class="mx-auto img-fluid w-25 rounded-circle">
+                </figure>
+                <p class="text-white"><strong>{{ testimonial.name_surname }}</strong></p>
+                <blockquote>
+                    <p>&ldquo;{{ testimonial.description }}&rdquo;</p>
+                </blockquote>
+            </div>
+        {% endthumbnail %}
+    {% endfor %}
+{% endblock %}
