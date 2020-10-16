@@ -26,3 +26,16 @@ class MainPicture(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Testimonial(models.Model):
+    name_surname = models.CharField("Name, Surname", max_length=60)
+    description = models.TextField("Description", max_length=300)
+    photo = models.ImageField("Photo", upload_to="images/photo")
+
+    class Meta:
+        verbose_name = "Рекомендация"
+        verbose_name_plural = "Рекомендации"
+
+    def __str__(self):
+        return self.name_surname

@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'django_cleanup',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [

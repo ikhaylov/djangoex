@@ -1,24 +1,32 @@
 {% extends "index.html" %}
+{% load thumbnail %}
 
 {% block main_picture %}
-    <section class="site-section-hero bg-image" style="background-image: url({{ main_pictur.main_picture.url }});" data-stellar-background-ratio="0.5" id="section-home">
+
+    {% thumbnail main_pictur.main_picture "1600x1600" crop="center" as im%}
+        <section class="site-section-hero bg-image" style="background-image: url({{ im.url }});" data-stellar-background-ratio="0.5" id="section-home">
+    {% endthumbnail %}
+{#    <section class="site-section-hero bg-image" style="background-image: url({{ main_pictur.main_picture.url }});" data-stellar-background-ratio="0.5" id="section-home">#}
 {% endblock %}
 
 
 {% block pictures_list %}
 
     {% for picture in pictures %}
-
+        {% thumbnail picture.picture "x350" crop="center" as im %}
         <div class="col-6 col-md-6 col-lg-4 spspsp" data-aos="fade-up">
             <a href="{{ picture.picture.url }}" class="d-block photo-item" data-fancybox="gallery">
-                <img src="{{ picture.picture.url }}" alt="Image" class="img-fluid">
+                <img src="{{ im.url }}" alt="Image" class="img-fluid">
                     <div class="photo-text-more">
                         <span class="icon icon-search"></span>
                     </div>
             </a>
         </div>
-
+        {% endthumbnail %}
     {% endfor %}
 
 {% endblock %}
+
+{#width="{{ im.width }}" height="{{ im.height }}"#}
+
 
