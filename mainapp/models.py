@@ -35,9 +35,9 @@ class Testimonial(models.Model):
     name_surname = models.CharField("Name, Surname", max_length=60)
     description = models.TextField("Description", max_length=600)
     photo = models.ImageField("Photo", upload_to="images/photo")
-    text1 = RichTextField()
-    text2 = CKEditor5Field(config_name = 'extends')
-    text3 = HTMLField()
+    text1 = RichTextField(blank=False)
+    text2 = CKEditor5Field(blank=False, config_name = 'extends')
+    text3 = HTMLField(blank=False)
     # config_name = 'extends'
 
     class Meta:
