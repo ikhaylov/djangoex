@@ -1,7 +1,5 @@
 from django.db import models
-from tinymce.models import HTMLField
 from django_ckeditor_5.fields import CKEditor5Field
-from djrichtextfield.models import RichTextField
 
 
 class Pictures(models.Model):
@@ -35,10 +33,7 @@ class Testimonial(models.Model):
     name_surname = models.CharField("Name, Surname", max_length=60)
     description = models.TextField("Description", max_length=600)
     photo = models.ImageField("Photo", upload_to="images/photo")
-    text1 = RichTextField(blank=False)
-    text2 = CKEditor5Field(blank=False, config_name = 'extends')
-    text3 = HTMLField(blank=False)
-    # config_name = 'extends'
+    text = CKEditor5Field('CKEditor5Field', blank=False, config_name='extends')
 
     class Meta:
         verbose_name = "Рекомендация"

@@ -31,8 +31,6 @@ INSTALLED_APPS = [
     'django_cleanup',
     'sorl.thumbnail',
     'django_ckeditor_5',
-    'djrichtextfield',
-    'tinymce',
 ]
 
 MIDDLEWARE = [
