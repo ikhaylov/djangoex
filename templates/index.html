@@ -35,18 +35,18 @@
 
   <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
     <div class="site-logo">
-      <a href="index.html">AKVSHI Photo</a>
+      <a href="{% url "main" %}">AKVSHI Photo</a>
     </div>
     
     <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
     <div class="main-menu">
       <ul class="js-clone-nav">
-        <li><a href="#section-home" class="nav-link">Home</a></li>
+        <li><a href="{% url "main" %}" class="nav-link">Home</a></li>
         <li><a href="#section-photos" class="nav-link">Photos</a></li>
         <li><a href="#section-bio" class="nav-link">Biography</a></li>
         <li><a href="#section-blog" class="nav-link">Blog</a></li>
-        <li><a href="#section-contact" class="nav-link">Contact</a></li>
+        <li><a href="{% url "contact" %}" class="nav-link">Contact</a></li>
       </ul>
       <ul class="social js-clone-nav">
         <li><a href="#"><span class="icon-facebook"></span></a></li>
@@ -61,31 +61,18 @@
 
 
   {% block main_picture %}
-        <section class="site-section-hero bg-image" style="background-image: url({% static "images/img_9.jpg" %});" data-stellar-background-ratio="0.5" id="section-home">
+
   {% endblock %}
-        <div class="row justify-content-center align-items-center">
-          <div class="col-md-7 text-center">
-            <h1 class="text-white heading text-uppercase" data-aos="fade-up">Welcome</h1>
-            <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">Welcome to the Akashi art gallery</p>
-            <p data-aos="fade-up" data-aos-delay="100"><a href="#section-contact" class="btn btn-primary btn-md smoothscroll">Contact Me</a></p>
-          </div>
-        </div>
-      </section>
+
 
     <div class="container-fluid">
 
-      <section class="row align-items-stretch photos" id="section-photos">
-        <div class="col-12">
-        <div class="row align-items-stretch">
+
 
             {% block pictures_list %}
 
             {% endblock %}
 
-      </div>
-        
-    </div>
-      </section> <!-- #section-photos -->
 
 
 

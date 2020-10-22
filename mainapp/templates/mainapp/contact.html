@@ -1,4 +1,5 @@
 {% extends "index.html" %}
+
 {% block contact %}
     <section class="site-section darken-bg " id="section-contact">
         <div class="container">
@@ -6,32 +7,39 @@
             <div class="col-md-8">
               <h2 class="text-white mb-5 heading">Contact</h2>
 
-              <form action="#">
 
+              <form action="#" method="post">
+                  {% csrf_token %}
 
+{#                  {{ form.first_name }}#}
+{#                  {{ form. }}#}
 
-                    <div class="row form-group">
+                  <div class="row form-group">
                       <div class="col-md-6 mb-3 mb-md-0">
-                        <label class="text-white" for="fname">First Name</label>
-                        <input type="text" id="fname" class="form-control">
+
+                        <label class="text-white" for="fname">{{ form.first_name.label_tag }}</label>
+                          {{ form.first_name }}
+{#                        <input type="text" id="fname" class="form-control">#}
                       </div>
                       <div class="col-md-6">
-                        <label class="text-white" for="lname">Last Name</label>
-                        <input type="text" id="lname" class="form-control">
+                        <label class="text-white" for="lname">{{ form.last_name.label_tag }}</label>
+                          {{ form.last_name }}
+{#                        <input type="text" id="lname" class="form-control">#}
                       </div>
                     </div>
 
                     <div class="row form-group">
 
                       <div class="col-md-12">
-                        <label class="text-white" for="email">Email</label>
-                        <input type="email" id="email" class="form-control">
+                        <label class="text-white" for="email">{{ form.email.label_tag }}</label>
+                          {{ form.email }}
+{#                        <input type="email" id="email" class="form-control">#}
                       </div>
                     </div>
 
                     <div class="row form-group mb-5">
                       <div class="col-md-12">
-                        <label class="text-white" for="message">Message</label>
+                        <label class="text-white" for="message">{{ form.text.label_tag }}</label>
                         <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Write your notes or questions here..."></textarea>
                       </div>
                     </div>
@@ -41,6 +49,56 @@
                         <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
                       </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#                    <div class="row form-group">#}
+{#                      <div class="col-md-6 mb-3 mb-md-0">#}
+{##}
+{#                        <label class="text-white" for="fname">First Name</label>#}
+{#                        <input type="text" id="fname" class="form-control">#}
+{#                      </div>#}
+{#                      <div class="col-md-6">#}
+{#                        <label class="text-white" for="lname">Last Name</label>#}
+{#                        <input type="text" id="lname" class="form-control">#}
+{#                      </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="row form-group">#}
+{##}
+{#                      <div class="col-md-12">#}
+{#                        <label class="text-white" for="email">Email</label>#}
+{#                        <input type="email" id="email" class="form-control">#}
+{#                      </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="row form-group mb-5">#}
+{#                      <div class="col-md-12">#}
+{#                        <label class="text-white" for="message">Message</label>#}
+{#                        <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Write your notes or questions here..."></textarea>#}
+{#                      </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="row form-group">#}
+{#                      <div class="col-md-12">#}
+{#                        <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">#}
+{#                      </div>#}
+{#                    </div>#}
 
 
                   </form>
@@ -53,15 +111,15 @@
 
 
 {#      <section class="site-section darken-bg">#}
-      <div class="row justify-content-center">
-        <div class="col-md-12 text-center py-1 darken-bg">
-          <p>
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
-              <i class="icon-heart text-danger" aria-hidden="true"></i> by
-              <a href="https://user1221.pythonanywhere.com" target="_blank" >AKVSHI</a>
-            </p>
-        </div>
-      </div>
+{#      <div class="row justify-content-center">#}
+{#        <div class="col-md-12 text-center py-1 darken-bg">#}
+{#          <p>#}
+{#            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved#}
+{#              <i class="icon-heart text-danger" aria-hidden="true"></i> by#}
+{#              <a href="https://user1221.pythonanywhere.com" target="_blank" >AKVSHI</a>#}
+{#            </p>#}
+{#        </div>#}
+{#      </div>#}
 {% endblock %}
 
 

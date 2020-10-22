@@ -18,8 +18,9 @@ def main_pict(request):
 def contact(request):
     if request.method == "POST":
         form = EmailSendForm(request.POST)
+        print("--------------------------------\n", form.as_p(), "\n----------------------------------")
         if form.is_valid():
-            return HttpResponseRedirect("/thanks/")
+            return HttpResponseRedirect("/contact")
     else:
         form = EmailSendForm()
     return render(request, "mainapp/contact.html", {"form": form})
