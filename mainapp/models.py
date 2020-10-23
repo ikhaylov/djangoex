@@ -41,3 +41,16 @@ class Testimonial(models.Model):
 
     def __str__(self):
         return self.name_surname
+
+
+class Contact(models.Model):
+    first_name = models.CharField("Имя", max_length=50)
+    last_name = models.CharField("Фамилия", max_length=50, null=True, blank=True)
+    email = models.EmailField()
+    text = models.TextField("Message")
+
+    # first_name = models.CharField("Имя", max_length=50, error_messages="поле Имя не заполнено")
+    # last_name = models.CharField("Фамилия", max_length=50, error_messages="поле Фамилия не заполнено")
+    # email = models.EmailField(error_messages="поле Эмеил не заполнено")
+    # text = models.TextField("Message", error_messages="поле Сообщение не заполнено")
+    # error_css_class = 'error'

@@ -7,23 +7,41 @@
             <div class="col-md-8">
               <h2 class="text-white mb-5 heading">Contact</h2>
 
+                    <h1> Email successfully sent</h1>
 
-              <form action="#" method="post">
-                  {% csrf_token %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <form action="." method="post">
+
+{#                  {{ form.first_name.label_tag }}#}
+{#                  {{ form.first_name.label_tag }}#}
+{#                  {{ form.first_name.label_tag }}#}
 
 {#                  {{ form.first_name }}#}
 {#                  {{ form. }}#}
 
                   <div class="row form-group">
                       <div class="col-md-6 mb-3 mb-md-0">
-
-                        <label class="text-white" for="fname">{{ form.first_name.label_tag }}</label>
-                          {{ form.first_name }}
-{#                        <input type="text" id="fname" class="form-control">#}
+                                {% if form.error %}
+                          {{ form.errors }}
+{% endif %}
+                          <label for="first_name" class="text-white">Имя:</label>
+                          <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Введите имя...">
                       </div>
                       <div class="col-md-6">
-                        <label class="text-white" for="lname">{{ form.last_name.label_tag }}</label>
-                          {{ form.last_name }}
+                        <label class="text-white" for="lname">Фамилия:</label>
+                          <input type="text" name="last_name" id="first_name" class="form-control" placeholder="Введите фамилию...">
 {#                        <input type="text" id="lname" class="form-control">#}
                       </div>
                     </div>
@@ -31,21 +49,25 @@
                     <div class="row form-group">
 
                       <div class="col-md-12">
-                        <label class="text-white" for="email">{{ form.email.label_tag }}</label>
-                          {{ form.email }}
+                        <label class="text-white" for="email">Email:</label>
+                          <input type="email" name="email" id="email" class="form-control" placeholder="Введите Email... ">
 {#                        <input type="email" id="email" class="form-control">#}
                       </div>
                     </div>
 
                     <div class="row form-group mb-5">
                       <div class="col-md-12">
-                        <label class="text-white" for="message">{{ form.text.label_tag }}</label>
-                        <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                        <label class="text-white" for="message">Сообщение:</label>
+                          <textarea name="text" id="text" cols="30" rows="5" class="form-control"
+                          placeholder="Введите текст сообщения..."></textarea>
+
+{#                        <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Write your notes or questions here..."></textarea>#}
                       </div>
                     </div>
 
                     <div class="row form-group">
                       <div class="col-md-12">
+                          {% csrf_token %}
                         <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
                       </div>
                     </div>
@@ -100,7 +122,7 @@
 {#                      </div>#}
 {#                    </div>#}
 
-
+{#{{ form.fields }}#}
                   </form>
             </div>
           </div>
