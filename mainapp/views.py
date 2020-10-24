@@ -35,7 +35,7 @@ def contact(request):
             try:
                 send_mail(name, message, "sonikry.99@mail.ru", ["it.nova@mail.ru"])
             except:
-                
+                return redirect("contact")
             # logs = [name, email, message]
             # with open("logemail.txt", "a") as log:
             #     log.write(str(logs) + "\n\n\n################################################################\n\n\n")
