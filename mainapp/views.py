@@ -28,11 +28,18 @@ def contact(request):
             name = cd['first_name'] + " " + (cd['last_name'] if cd["last_name"] else "no surname")
             email = cd["email"]
             message = cd['text']
-            print(name, email, message)
+            # print(name, email, message)
 
             # sent = True
-            print(name, message, "it.nova@mail.ru", [email])
-            send_mail(name, message, "sonikry.99@mail.ru", ["it.nova@mail.ru"])
+            # print(name, message, "it.nova@mail.ru", [email])
+            try:
+                send_mail(name, message, "sonikry.99@mail.ru", ["it.nova@mail.ru"])
+            except:
+                
+            # logs = [name, email, message]
+            # with open("logemail.txt", "a") as log:
+            #     log.write(str(logs) + "\n\n\n################################################################\n\n\n")
+
             form.clean()
             return redirect("thanks")
     else:

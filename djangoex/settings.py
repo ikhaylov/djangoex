@@ -123,7 +123,7 @@ MEDIA_URL = '/media/'
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 2525
 EMAIL_HOST_USER = "sonikry.99@mail.ru"
-EMAIL_HOST_PASSWORD = "fuck"
+EMAIL_HOST_PASSWORD = "1999.Sonikry"
 EMAIL_USE_TLS = True
 
 
