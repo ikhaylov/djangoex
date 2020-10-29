@@ -179,10 +179,10 @@ CKEDITOR_5_CONFIGS = {
             '|',
             'bulletedList', 'numberedList',
             '|',
-            'blockQuote', 'imageUpload'
+            # 'blockQuote', 'imageUpload'
         ],
         'toolbar': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
-        'code','subscript', 'superscript', 'highlight', '|',
+        'code', 'subscript', 'superscript', 'highlight', '|',
                     'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
                     'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
                     'insertTable',],

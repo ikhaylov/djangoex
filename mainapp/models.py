@@ -2,6 +2,7 @@ from django.db import models
 from django_ckeditor_5.fields import CKEditor5Field
 
 
+
 class Pictures(models.Model):
     name = models.CharField("Name of picture", max_length=50)
     date_upload = models.DateTimeField(auto_now_add=True)
@@ -33,7 +34,7 @@ class Testimonial(models.Model):
     name_surname = models.CharField("Name, Surname", max_length=60)
     description = models.TextField("Description", max_length=600)
     photo = models.ImageField("Photo", upload_to="images/photo")
-    text = CKEditor5Field('CKEditor5Field', blank=False, config_name='extends')
+    text = CKEditor5Field('CKEditor5Field', blank=False, config_name='image')
 
     class Meta:
         verbose_name = "Рекомендация"
