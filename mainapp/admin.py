@@ -1,5 +1,7 @@
 from django.contrib import admin
+from django import forms
 from .models import Pictures, MainPicture, Testimonial
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 # Register your models here.
 @admin.register(Pictures)
@@ -7,6 +9,17 @@ class AdminPictures(admin.ModelAdmin):
     list_display = ["name", "picture", "date_upload"]
     name = 'mainapp'
     verbose_name = "Главная страница"
+
+
+class BiographyAdminForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorUploadingWidget())
+
+    class Meta:
+        model = Testimonial
+        fields = "__all__"
+
+
+
 
 
 @admin.register(MainPicture)
@@ -17,5 +30,6 @@ class AdminMainPicture(admin.ModelAdmin):
 @admin.register(Testimonial)
 class AdminTestimonial(admin.ModelAdmin):
     list_display = ["name_surname", "description", "photo"]
+    form = BiographyAdminForm
 
 

@@ -1,7 +1,7 @@
 from django.db import models
 # from django_ckeditor_5.fields import CKEditor5Field
 from ckeditor.fields import RichTextField
-
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Pictures(models.Model):
@@ -35,7 +35,8 @@ class Testimonial(models.Model):
     name_surname = models.CharField("Name, Surname", max_length=60)
     description = models.TextField("Description", max_length=600)
     photo = models.ImageField("Photo", upload_to="images/photo")
-    text = RichTextField("RichTextField", blank=False, config_name='default555')
+    # text = RichTextField("RichTextField", blank=False, config_name='default')
+    # text2 = RichTextUploadingField()
     # text = CKEditor5Field('CKEditor5Field', blank=False, config_name='default2')
 
     class Meta:
