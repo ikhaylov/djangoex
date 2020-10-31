@@ -110,11 +110,9 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 MEDIA_ROOT = "media/"
@@ -128,138 +126,138 @@ EMAIL_HOST_PASSWORD = "1999.Sonikry"
 EMAIL_USE_TLS = True
 
 
-
 CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
-CKEDITOR_CONFIGS = {
-    'default1': {
-        'toolbar': 'full',
-    },
-    'default': {
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            # ['Source', '-', 'Preview', 'Table', 'Textarea', 'Templates', '-', 'Undo', 'Redo', 'Image', 'Image2'],
-            # ['Source', '-', 'Bold', 'Italic'],
-            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
-            {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
-            {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
-            {'name': 'forms',
-             'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
-                       'HiddenField']},
-            '/',
-            {'name': 'basicstyles',
-             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
-            {'name': 'paragraph',
-             'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
-                       'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
-                       'Language']},
-            {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
-            {'name': 'insert',
-             'items': ['Image', 'image2', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
-            '/',
-            {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
-            {'name': 'colors', 'items': ['TextColor', 'BGColor']},
-{'extraPlugins': ','.join([
-            'uploadimage',
-            'image2',
-            'div',
-            'autolink',
-            'autoembed',
-            'embedsemantic',
-            'autogrow',
-            # 'devtools',
-            'widget',
-            'lineutils',
-            'clipboard',
-            'dialog',
-            'dialogui',
-            'elementspath'
-            ]),},
-            {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
-            # {'name': 'about', 'items': ['About']},
-            '/',  # put this to force next toolbar on new line
-            {'name': 'yourcustomtools', 'items': [
-                # put the name of your editor.ui.addButton here
-                'Preview',
-                'Maximize'],},
-        ],
-    },
+# CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
-
-
-
-
-
-
-
-    'default555': {
-        # 'skin': 'Kama',
-        'skin': 'moono',
-        # 'skin': 'office2013',
-        'toolbar_Basic': [
-            ['Source', '-', 'Bold', 'Italic']
-        ],
-        'toolbar_YourCustomToolbarConfig': [
-            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
-            {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
-            {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
-            {'name': 'forms',
-             'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
-                       'HiddenField']},
-            '/',
-            {'name': 'basicstyles',
-             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
-            {'name': 'paragraph',
-             'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
-                       'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
-                       'Language']},
-            {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
-            {'name': 'insert',
-             'items': ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
-            '/',
-            {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
-            {'name': 'colors', 'items': ['TextColor', 'BGColor']},
-            {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
-            {'name': 'about', 'items': ['About']},
-            '/',  # put this to force next toolbar on new line
-            {'name': 'image2', 'items': [
-                # put the name of your editor.ui.addButton here
-                'Preview',
-                'Maximize',
-                'image2',
-                'imageuploader'
-
-            ]},
-        ],
-        'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
-        # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
-        # 'height': 291,
-        # 'width': '100%',
-        # 'filebrowserWindowHeight': 725,
-        # 'filebrowserWindowWidth': 940,
-        # 'toolbarCanCollapse': True,
-        # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
-        'tabSpaces': 4,
-        'extraPlugins': ','.join([
-            'uploadimage', # the upload image feature
-            # your extra plugins here
-            'div',
-            'image2',
-            'autolink',
-            'autoembed',
-            'embedsemantic',
-            'autogrow',
-            # 'devtools',
-            'widget',
-            'lineutils',
-            'clipboard',
-            'dialog',
-            'dialogui',
-            'elementspath',
-        ]),
-    }
-}
+# CKEDITOR_CONFIGS = {
+#     'default1': {
+#         'toolbar': 'full',
+#     },
+#     'default': {
+#         'toolbar': 'Custom',
+#         'toolbar_Custom': [
+#             # ['Source', '-', 'Preview', 'Table', 'Textarea', 'Templates', '-', 'Undo', 'Redo', 'Image', 'Image2'],
+#             # ['Source', '-', 'Bold', 'Italic'],
+#             {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
+#             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
+#             {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
+#             {'name': 'forms',
+#              'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
+#                        'HiddenField']},
+#             '/',
+#             {'name': 'basicstyles',
+#              'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+#             {'name': 'paragraph',
+#              'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
+#                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
+#                        'Language']},
+#             {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
+#             {'name': 'insert',
+#              'items': ['Image', 'image2', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
+#             '/',
+#             {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
+#             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+# {'extraPlugins': ','.join([
+#             'uploadimage',
+#             'image2',
+#             'div',
+#             'autolink',
+#             'autoembed',
+#             'embedsemantic',
+#             'autogrow',
+#             # 'devtools',
+#             'widget',
+#             'lineutils',
+#             'clipboard',
+#             'dialog',
+#             'dialogui',
+#             'elementspath'
+#             ]),},
+#             {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
+#             # {'name': 'about', 'items': ['About']},
+#             '/',  # put this to force next toolbar on new line
+#             {'name': 'yourcustomtools', 'items': [
+#                 # put the name of your editor.ui.addButton here
+#                 'Preview',
+#                 'Maximize'],},
+#         ],
+#     },
+#
+#
+#
+#
+#
+#
+#
+#
+#     'default555': {
+#         # 'skin': 'Kama',
+#         'skin': 'moono',
+#         # 'skin': 'office2013',
+#         'toolbar_Basic': [
+#             ['Source', '-', 'Bold', 'Italic']
+#         ],
+#         'toolbar_YourCustomToolbarConfig': [
+#             {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
+#             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
+#             {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
+#             {'name': 'forms',
+#              'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
+#                        'HiddenField']},
+#             '/',
+#             {'name': 'basicstyles',
+#              'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+#             {'name': 'paragraph',
+#              'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
+#                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
+#                        'Language']},
+#             {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
+#             {'name': 'insert',
+#              'items': ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
+#             '/',
+#             {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
+#             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+#             {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
+#             {'name': 'about', 'items': ['About']},
+#             '/',  # put this to force next toolbar on new line
+#             {'name': 'image2', 'items': [
+#                 # put the name of your editor.ui.addButton here
+#                 'Preview',
+#                 'Maximize',
+#                 'image2',
+#                 'imageuploader'
+#
+#             ]},
+#         ],
+#         'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
+#         # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
+#         # 'height': 291,
+#         # 'width': '100%',
+#         # 'filebrowserWindowHeight': 725,
+#         # 'filebrowserWindowWidth': 940,
+#         # 'toolbarCanCollapse': True,
+#         # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+#         'tabSpaces': 4,
+#         'extraPlugins': ','.join([
+#             'uploadimage', # the upload image feature
+#             # your extra plugins here
+#             'div',
+#             'image2',
+#             'autolink',
+#             'autoembed',
+#             'embedsemantic',
+#             'autogrow',
+#             # 'devtools',
+#             'widget',
+#             'lineutils',
+#             'clipboard',
+#             'dialog',
+#             'dialogui',
+#             'elementspath',
+#         ]),
+#     }
+# }
 
 
 

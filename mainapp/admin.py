@@ -12,7 +12,7 @@ class AdminPictures(admin.ModelAdmin):
 
 
 class BiographyAdminForm(forms.ModelForm):
-    description = forms.CharField(widget=CKEditorUploadingWidget())
+    description = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
 
     class Meta:
         model = Testimonial
