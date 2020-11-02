@@ -29,7 +29,6 @@ def contact(request):
             email = cd["email"]
             message = cd['text']
             # print(name, email, message)
-
             # sent = True
             # print(name, message, "it.nova@mail.ru", [email])
             try:
@@ -49,10 +48,12 @@ def contact(request):
     return render(request, "mainapp/contact.html", {"form": form})
 
 
-
 def thanks(request):
     return render(request, "mainapp/thanks.html")
 
+
+def blog(request):
+    return render(request, "mainapp/blog.html")
 # hello = (cd["first_name"],
 #          cd["last_name"],
 #          cd["email"],
