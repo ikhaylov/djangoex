@@ -53,7 +53,25 @@ def thanks(request):
 
 
 def blog(request):
-    return render(request, "mainapp/blog.html")
+    blogs = Testimonial.objects.all()
+    return render(request, "mainapp/blog.html", {"blogs": blogs})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # hello = (cd["first_name"],
 #          cd["last_name"],
 #          cd["email"],

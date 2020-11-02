@@ -32,12 +32,10 @@ class MainPicture(models.Model):
 
 
 class Testimonial(models.Model):
-    name_surname = models.CharField("Name, Surname", max_length=60)
+    name_surname = models.CharField("Название", max_length=60)
     description = models.TextField("Description")
     photo = models.ImageField("Photo", upload_to="images/photo")
-    # text = RichTextField("RichTextField", blank=False, config_name='default')
-    text2 = RichTextUploadingField()
-    # text = CKEditor5Field('CKEditor5Field', blank=False, config_name='default2')
+    text2 = RichTextUploadingField(config_name="my_config")
 
     class Meta:
         verbose_name = "Рекомендация"

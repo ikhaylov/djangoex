@@ -128,6 +128,81 @@ EMAIL_USE_TLS = True
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
+
+CKEDITOR_CONFIGS = {
+    # 'skin': 'moono',
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    },
+    'my_config': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ["Source", "Templates", 'Format', 'Font', 'FontSize', 'Maximize', 'ShowBlocks'], '/',
+            ['Image', 'Table', 'Bold', 'Italic', 'Underline', 'Strike', 'Indent', 'Outdent', 'HorizontalRule'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'Blockquote', 'NumberedList'],
+            ['BulletedList', 'TextColor', 'BGColor', 'Link', 'Smiley', 'SpecialChar',], '/',
+            ['Find', 'Subscript', 'Superscript',], '/',
+            [], '/',
+            [], '/',
+
+            # 'extraPlugins': 'codesnippet',
+        ],
+            # 'extraPlugins': 'spreadsheet'
+    },
+}
+
+
+
+# config.toolbar = [
+#     {name: 'document', items: ['Source', '-', 'Save', 'NewPage', 'ExportPdf', 'Preview', 'Print', '-', 'Templates']},
+#     {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
+#     {name: 'editing', items: ['Find', 'Replace', '-', 'SelectAll', '-', 'Scayt']},
+#     {name: 'forms',
+#      items: ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField']},
+#     '/',
+#     {name: 'basicstyles',
+#      items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting',
+#              'RemoveFormat']},
+#     {name: 'paragraph',
+#      items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
+#              'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language']},
+#     {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
+#     {name: 'insert',
+#      items: ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
+#     '/',
+#     {name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize']},
+#     {name: 'colors', items: ['TextColor', 'BGColor']},
+#     {name: 'tools', items: ['Maximize', 'ShowBlocks']},
+#     {name: 'about', items: ['About']}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
 # CKEDITOR_CONFIGS = {

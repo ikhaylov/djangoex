@@ -29,7 +29,9 @@ class AdminMainPicture(admin.ModelAdmin):
 
 @admin.register(Testimonial)
 class AdminTestimonial(admin.ModelAdmin):
-    list_display = ["name_surname", "description", "photo"]
+    list_display = ["name_surname", "photo"]
+    # list_editable = ("photo", )
+    search_fields = ('name_surname',)
     form = BiographyAdminForm
 
 
