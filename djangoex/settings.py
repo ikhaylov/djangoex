@@ -147,7 +147,7 @@ CKEDITOR_CONFIGS = {
             ['Image', 'Table', 'Bold', 'Italic', 'Underline', 'Strike', 'Indent', 'Outdent', 'HorizontalRule'],
             ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'Blockquote', 'NumberedList'],
             ['BulletedList', 'TextColor', 'BGColor', 'Link', 'Smiley', 'SpecialChar',], '/',
-            ['Find', 'Subscript', 'Superscript',], '/',
+            ['Find', 'Subscript', 'Superscript'], '/',
             [], '/',
             [], '/',
 

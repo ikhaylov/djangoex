@@ -1,20 +1,16 @@
-let title2 = "This is title two";
-let title = "This is simple title";
+var num = "htllo worldasd";
+console.log(num);
 
-let num = "123";
-let str = -0;
-// alert(typeof(String(str)));
-// alert(typeof(Number(num)));
-// alert(typeof(Boolean(num)));
-alert(Boolean(str));
+// var name = prompt("Введите ваше имя ...")
 
+// console.log("Ваше имя - " + name)
 
+var firstNum = 12;
+var secondNum = 23;
 
-// let ifboo = confirm("желаете ли ввести ваше имя?");
-// if (ifboo){
-//     let name = prompt("Введите ваше имя");
-//     alert("ваше имя: " + name)
-// }
+var colors = ["red", "blue", "yellow"];
+var colors2 = new Array ("red", "green", "black");
+colors2[3] += ["pink"];
 
 
 
@@ -22,6 +18,8 @@ alert(Boolean(str));
 
 
 
+document.write(colors2[3]);
+// document.write("Результат сложения программы - ", firstNum + secondNum)
 
 
 
