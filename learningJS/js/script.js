@@ -1,26 +1,26 @@
 
-function changeColor (newColor){
-    var element = document.getElementById("text");
-    element.style.color = newColor;
-}
-
-function validationForm(){
-    var fname = document.forms["myForm"]["fname"].value;
-    var sname = document.forms["myForm"]["sname"].value;
-    if (fname == "" && sname == ""){
-        alert("Вы не ввели ничего");
-        return false;
-    } else if(fname == ""){
-        alert("Вы не ввели имя")
-        return false;
-    } else if(sname == ""){
-        alert("Вы не ввели фамилию")
-        return false;
-    }
-
-
-}
-
+// function changeColor (newColor){
+//     var element = document.getElementById("text");
+//     element.style.color = newColor;
+// }
+//
+// function validationForm(){
+//     var fname = document.forms["myForm"]["fname"].value;
+//     var sname = document.forms["myForm"]["sname"].value;
+//     if (fname == "" && sname == ""){
+//         alert("Вы не ввели ничего");
+//         return false;
+//     } else if(fname == ""){
+//         alert("Вы не ввели имя")
+//         return false;
+//     } else if(sname == ""){
+//         alert("Вы не ввели фамилию")
+//         return false;
+//     }
+//
+//
+// }
+//
 
 
 
